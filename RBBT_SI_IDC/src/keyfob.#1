@@ -50,7 +50,7 @@
 #define bPreambleManch_c		0xff
 #define bSync1_c			0x2d
 #define bSync2_c			0xd4
-//RF settings used in rke_demo_2 fw of demo keyfobs in Silabs kits:
+/*RF settings used in rke_demo_2 fw of demo keyfobs in Silabs kits:
   #define f_315_RkeFreqOOK_c		316660000.0	// for RKEdemo OOK
   #define f_315_RkeFreqFSK_c		316703093.0	// for RKEdemo FSK, upper frequency
   #define b_315_RkeFskDev_c			102	// deviation 43kHz
@@ -78,7 +78,7 @@
   #define b_915_PaLevel_c			77	// PA level
   #define b_915_PaMaxDrv_c			1	// PA level
   #define b_915_PaNominalCap_c		        69	// PA level
-
+*/
 #define iLowBatMv_c		2500
 
 //defines GPIO pins used for button input (see button vector mapping in AN370)
@@ -122,7 +122,7 @@ void vPacketAssemble    /* Assemble packet for Rke demo receiver*/
       (
         void
       );
-void vButtonCheck       /* Buttoons checking */
+void vButtonCheck       /* Buttons checking */
       (
         void
       );

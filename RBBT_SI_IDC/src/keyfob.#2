@@ -39,10 +39,10 @@
 #define bModOOK_c				0
 #define bModFSK_c				1
 
-#define bHFrameSize_c                   18
-#define bPreambleSize_c		   	5	
+#define bHFrameSize_c                   2
+#define bPreambleSize_c		   	4	
 #define bSyncSize_c                     2       
-#define bPayloadSize_c		   	7
+#define bPayloadSize_c		   	10
 #define bCrcSize_c                      2	
 #define bFrameSize_c		        (bPreambleSize_c + bSyncSize_c + bPayloadSize_c + bCrcSize_c)
 #define bPayloadStartIndex_c            (bPreambleSize_c + bSyncSize_c)
@@ -122,7 +122,7 @@ void vPacketAssemble    /* Assemble packet for Rke demo receiver*/
       (
         void
       );
-void vButtonCheck       /* Buttoons checking */
+void vButtonCheck       /* Buttons checking */
       (
         void
       );

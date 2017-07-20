@@ -50,34 +50,6 @@
 #define bPreambleManch_c		0xff
 #define bSync1_c			0x2d
 #define bSync2_c			0xd4
-//RF settings used in rke_demo_2 fw of demo keyfobs in Silabs kits:
-  #define f_315_RkeFreqOOK_c		316660000.0	// for RKEdemo OOK
-  #define f_315_RkeFreqFSK_c		316703093.0	// for RKEdemo FSK, upper frequency
-  #define b_315_RkeFskDev_c			102	// deviation 43kHz
-  #define b_315_PaLevel_c			60	// PA level
-  #define b_315_PaMaxDrv_c			0	// PA level
-  #define b_315_PaNominalCap_c		        270	// PA level
-
-  #define f_433_RkeFreqOOK_c		433920000.0	// for RKEdemo OOK
-  #define f_433_RkeFreqFSK_c		433979050.0	// for RKEdemo FSK, upper frequency
-  #define b_433_RkeFskDev_c			102	// deviation 59kHz
-  #define b_433_PaLevel_c			77	// PA level
-  #define b_433_PaMaxDrv_c			1	// PA level
-  #define b_433_PaNominalCap_c		        192	// PA level
-
-  #define f_868_RkeFreqOOK_c		868300000.0	// for RKEdemo OOK
-  #define f_868_RkeFreqFSK_c		868418922.0	// for RKEdemo FSK
-  #define b_868_RkeFskDev_c			103     // deviation 119kHz
-  #define b_868_PaLevel_c			77	// PA level
-  #define b_868_PaMaxDrv_c			1	// PA level
-  #define b_868_PaNominalCap_c		        81	// PA level
-
-  #define f_915_RkeFreqOOK_c		917000000.0	// for RKEdemo OOK
-  #define f_915_RkeFreqFSK_c		917120194.0	// for RKEdemo FSK
-  #define b_915_RkeFskDev_c			93      // deviation 120kHz
-  #define b_915_PaLevel_c			77	// PA level
-  #define b_915_PaMaxDrv_c			1	// PA level
-  #define b_915_PaNominalCap_c		        69	// PA level
 
 #define iLowBatMv_c		2500
 
