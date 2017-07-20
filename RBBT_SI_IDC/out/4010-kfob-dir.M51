@@ -1,0 +1,778 @@
+BL51 BANKED LINKER/LOCATER V6.22              07/20/2017  16:05:41  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE C:\Si4010_example_programs\RBBT_SI_IDC\src\isr_dmd.ob
+>> j, C:\Si4010_example_programs\common\src\si4010_link.obj, C:\Si4010_example
+>> _programs\common\src\si4010_rom_keil.obj, C:\Si4010_example_programs\common
+>> \src\si4010_data.obj, C:\Si4010_example_programs\RBBT_SI_IDC\src\keyfob_sta
+>> rtup.obj, C:\Si4010_example_programs\RBBT_SI_IDC\src\keyfob_main.obj TO C:\
+>> Si4010_example_programs\RBBT_SI_IDC\out\4010-kfob-dir.omf PL (68) PW (78) I
+>> XREF RS (256) CODE (0X0-0X08FF) XDATA (0X0900-0X107F) DATA (0X40) IDATA (0X
+>> 70) STACK (?STACK (0X90))
+
+
+MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
+
+
+INPUT MODULES INCLUDED:
+  C:\Si4010_example_programs\RBBT_SI_IDC\src\isr_dmd.obj (ISR_DMD)
+  C:\Si4010_example_programs\common\src\si4010_link.obj (SI4010_LINK)
+  C:\Si4010_example_programs\common\src\si4010_rom_keil.obj (SI4010_ROM_KEIL)
+  C:\Si4010_example_programs\common\src\si4010_data.obj (SI4010_DATA)
+  C:\Si4010_example_programs\RBBT_SI_IDC\src\keyfob_startup.obj (?C_STARTUP)
+  C:\Si4010_example_programs\RBBT_SI_IDC\src\keyfob_main.obj (KEYFOB_MAIN)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?LSTKXDATA)
+
+
+LINK MAP OF MODULE:  C:\Si4010_example_programs\RBBT_SI_IDC\out\4010-kfob-dir.
+>> omf (ISR_DMD)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            REG     0008H     0008H     ABSOLUTE     "REG BANK 1"
+            REG     0010H     0008H     ABSOLUTE     "REG BANK 2"
+                    0018H     0008H                  *** GAP ***
+            DATA    0020H     0001H     BIT_ADDR     ?BA?KEYFOB_MAIN
+                    0021H     000FH                  *** GAP ***
+            DATA    0030H     0010H     ABSOLUTE     
+            DATA    0040H     000DH     UNIT         ?DT?KEYFOB_MAIN
+                    004DH     0043H                  *** GAP ***
+            IDATA   0090H     0028H     UNIT         ?STACK
+                    00B8H     0008H                  *** GAP ***
+            IDATA   00C0H     0040H     ABSOLUTE     
+
+            * * * * * * *  X D A T A   M E M O R Y  * * * * * * *
+                    0000H     0900H                  *** GAP ***
+            XDATA   0900H     0048H     UNIT         ?XD?KEYFOB_MAIN
+                    0948H     0738H                  *** GAP ***
+            XDATA   1080H     0160H     ABSOLUTE     
+            XDATA   11E0H     0013H     ABSOLUTE     
+            XDATA   11F3H     0001H     ABSOLUTE     
+                    11F4H     0001H                  *** GAP ***
+            XDATA   11F5H     0001H     ABSOLUTE     
+                    11F6H     0001H                  *** GAP ***
+            XDATA   11F7H     0006H     ABSOLUTE     
+            XDATA   11FDH     0001H     ABSOLUTE     
+                    11FEH     0001H                  *** GAP ***
+            XDATA   11FFH     0001H     ABSOLUTE     
+                    1200H     2E02H                  *** GAP ***
+            XDATA   4002H     0001H     ABSOLUTE     
+                    4003H     0005H                  *** GAP ***
+            XDATA   4008H     0004H     ABSOLUTE     
+            XDATA   400CH     0002H     ABSOLUTE     
+                    400EH     0004H                  *** GAP ***
+BL51 BANKED LINKER/LOCATER V6.22            07/20/2017  16:05:41  PAGE 2
+
+
+            XDATA   4012H     0001H     ABSOLUTE     
+                    4013H     0003H                  *** GAP ***
+            XDATA   4016H     0001H     ABSOLUTE     
+            XDATA   4017H     0001H     ABSOLUTE     
+                    4018H     0028H                  *** GAP ***
+            XDATA   4040H     0010H     ABSOLUTE     
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     000DH     UNIT         ?C_INITSEG
+                    0010H     0003H                  *** GAP ***
+            CODE    0013H     0003H     ABSOLUTE     
+                    0016H     0005H                  *** GAP ***
+            CODE    001BH     0003H     ABSOLUTE     
+            CODE    001EH     016EH     UNIT         ?PR?MAIN?KEYFOB_MAIN
+            CODE    018CH     0089H     UNIT         ?C_C51STARTUP
+            CODE    0215H     0078H     UNIT         ?PR?VPACKETASSEMBLE?KEYFO
+>> B_MAIN
+            CODE    028DH     003EH     UNIT         ?PR?VREPEATTXLOOP?KEYFOB_
+>> MAIN
+            CODE    02CBH     003AH     UNIT         ?PR?_VCONVERTPACKET?KEYFO
+>> B_MAIN
+            CODE    0305H     0031H     UNIT         ?C?LIB_CODE
+            CODE    0336H     002AH     UNIT         ?PR?ISR_RTC?KEYFOB_MAIN
+            CODE    0360H     0029H     UNIT         ?PR?VBUTTONCHECK?KEYFOB_M
+>> AIN
+            CODE    0389H     001EH     UNIT         ?PR?VISR_DMD?ISR_DMD
+            CODE    03A7H     0014H     UNIT         ?CO?KEYFOB_MAIN
+
+
+
+OVERLAY MAP OF MODULE:   C:\Si4010_example_programs\RBBT_SI_IDC\out\4010-kfob-
+>> dir.omf (ISR_DMD)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?KEYFOB_MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?KEYFOB_MAIN
+  +--> ?PR?VPACKETASSEMBLE?KEYFOB_MAIN
+  +--> ?PR?VREPEATTXLOOP?KEYFOB_MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  C:\Si4010_example_programs\RBBT_SI_IDC\out\4010-kfob-
+>> dir.omf (ISR_DMD)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ISR_DMD
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:0389H         PUBLIC        vIsr_Dmd
+  D:00C8H         PUBLIC        TMR2CTRL
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          VISR_DMD
+  C:0389H         LINE#         38
+BL51 BANKED LINKER/LOCATER V6.22            07/20/2017  16:05:41  PAGE 3
+
+
+  C:0396H         LINE#         42
+  C:0396H         LINE#         62
+  C:0399H         LINE#         66
+  C:039CH         LINE#         67
+  -------         ENDPROC       VISR_DMD
+  -------         ENDMOD        ISR_DMD
+
+  -------         MODULE        SI4010_LINK
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  I:00C0H         PUBLIC        abSi4010_IdataApiReserve
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  X:1080H         PUBLIC        abSi4010_XdataApiReserve
+  D:0030H         PUBLIC        abSi4010_DataApiReserve
+  D:00C8H         PUBLIC        TMR2CTRL
+  D:00D0H         PUBLIC        PSW
+  -------         ENDMOD        SI4010_LINK
+
+  -------         MODULE        SI4010_ROM_KEIL
+  C:866EH         PUBLIC        ?C?CASTF
+  C:863AH         PUBLIC        ?C?FCASTC
+  C:8635H         PUBLIC        ?C?FCASTI
+  C:8630H         PUBLIC        ?C?FCASTL
+  C:8439H         PUBLIC        ?C?FPADD
+  C:89E8H         PUBLIC        ?C?FPCMP
+  C:89E6H         PUBLIC        ?C?FPCMP3
+  C:87F0H         PUBLIC        ?C?FPDIV
+  C:86A5H         PUBLIC        ?C?FPGETOPN2
+  C:852AH         PUBLIC        ?C?FPMUL
+  C:86DAH         PUBLIC        ?C?FPNANRESULT
+  C:86E4H         PUBLIC        ?C?FPOVERFLOW
+  C:86BCH         PUBLIC        ?C?FPRESULT
+  C:86D0H         PUBLIC        ?C?FPRESULT2
+  C:8435H         PUBLIC        ?C?FPSUB
+  C:86E1H         PUBLIC        ?C?FPUNDERFLOW
+  C:8A53H         PUBLIC        ?C?ICALL
+  C:8A57H         PUBLIC        ?C?ICALL2
+  C:8A59H         PUBLIC        ?C?IILDX
+  C:87C0H         PUBLIC        ?C?IMUL
+  C:87B3H         PUBLIC        ?C?LADD
+  C:86FDH         PUBLIC        ?C?LLDIDATA
+  C:8715H         PUBLIC        ?C?LLDIDATA0
+  C:8709H         PUBLIC        ?C?LLDXDATA
+  C:8722H         PUBLIC        ?C?LLDXDATA0
+  C:8746H         PUBLIC        ?C?LMUL
+  C:86EFH         PUBLIC        ?C?LNEG
+  C:87A6H         PUBLIC        ?C?LOR
+  C:8413H         PUBLIC        ?C?LSHL
+  C:872EH         PUBLIC        ?C?LSTIDATA
+  C:873AH         PUBLIC        ?C?LSTXDATA
+  C:87D2H         PUBLIC        ?C?LSUB
+  C:87E0H         PUBLIC        ?C?LXOR
+  C:8426H         PUBLIC        ?C?OFFXADD
+  C:895BH         PUBLIC        ?C?SIDIV
+  C:8A6FH         PUBLIC        ?C?SLDIV
+  C:8991H         PUBLIC        ?C?UIDIV
+  C:8795H         PUBLIC        ?C?ULCMP
+  C:88C9H         PUBLIC        ?C?ULDIV
+  C:8400H         PUBLIC        ?C?ULSHR
+  C:8015H         PUBLIC        BBSR_GETPTSITEMCNT
+  C:801EH         PUBLIC        BBSR_GETTIMESTAMP
+  C:8036H         PUBLIC        BDMDTS_GETSAMPLESTAKEN
+  C:807BH         PUBLIC        BNVM_COPYBLOCK
+BL51 BANKED LINKER/LOCATER V6.22            07/20/2017  16:05:41  PAGE 4
+
+
+  C:80EAH         PUBLIC        BSLEEPTIM_CHECKDUTYCYCLE
+  C:80CCH         PUBLIC        BSYS_GETBOOTSTATUS
+  C:80ABH         PUBLIC        BSYS_GETREVID
+  C:11EFH         PUBLIC        IDMDTS_GETDATA
+  C:8027H         PUBLIC        IDMDTS_GETLATESTDMDSAMPLE
+  C:802AH         PUBLIC        IDMDTS_GETLATESTTEMP
+  C:8057H         PUBLIC        LFC_GETCOUNT
+  C:8054H         PUBLIC        LFC_STARTPOLLGETCOUNT
+  C:80E4H         PUBLIC        LSLEEPTIM_GETCOUNT
+  C:11E0H         PUBLIC        LSLEEPTIM_GETONEHOURVALUE
+  C:80B4H         PUBLIC        LSYS_GETMASTERTIME
+  C:11E6H         PUBLIC        LSYS_GETPRODID
+  C:806CH         PUBLIC        PBMTP_READ
+  C:8018H         PUBLIC        VBSR_SERVICE
+  C:802DH         PUBLIC        VDMDTS_CLEARDMD
+  C:8030H         PUBLIC        VDMDTS_CLEARDMDINTFLAG
+  C:11ECH         PUBLIC        VDMDTS_ISRCALL
+  C:80F9H         PUBLIC        VFCAST_SETUP
+  C:8051H         PUBLIC        VFC_POLLDONE
+  C:804EH         PUBLIC        VFC_STARTCOUNT
+  C:806FH         PUBLIC        VMTP_STROBE
+  C:8081H         PUBLIC        VNVM_MCDISABLEREAD
+  C:807EH         PUBLIC        VNVM_MCENABLEREAD
+  C:11E3H         PUBLIC        VSTL_POSTLOOP
+  C:80D5H         PUBLIC        VSTL_PRELOOP
+  C:80C9H         PUBLIC        VSYS_FIRSTPOWERUP
+  C:8102H         PUBLIC        VSYS_FORCELC
+  C:80D2H         PUBLIC        VSYS_LPOSCADJ
+  C:80C0H         PUBLIC        VSYS_SHUTDOWN
+  C:801BH         PUBLIC        WBSR_GETCURRENTBUTTON
+  C:800CH         PUBLIC        WBSR_POP
+  C:8078H         PUBLIC        WNVM_GETADDR
+  C:80A8H         PUBLIC        WSYS_GETCHIPID
+  C:80CFH         PUBLIC        WSYS_GETKEILVER
+  C:80A5H         PUBLIC        WSYS_GETROMID
+  C:8AB3H         PUBLIC        _ABS
+  C:8045H         PUBLIC        _BENC_4B5BENCODE
+  C:8048H         PUBLIC        _BENC_MANCHESTERENCODE
+  C:805AH         PUBLIC        _BHVRAM_READ
+  C:8069H         PUBLIC        _BMTP_WRITE
+  C:80DEH         PUBLIC        _BSTL_ENCODEBYTE
+  C:80F0H         PUBLIC        _IMVDD_MEASURE
+  C:8060H         PUBLIC        _LMTP_GETDECCOUNT
+  C:8003H         PUBLIC        _VAES_CIPHER
+  C:8006H         PUBLIC        _VAES_INVCIPHER
+  C:8009H         PUBLIC        _VAES_INVGENKEY
+  C:8012H         PUBLIC        _VBSR_INITPTS
+  C:800FH         PUBLIC        _VBSR_SETUP
+  C:8039H         PUBLIC        _VDMDTS_ENABLE
+  C:803FH         PUBLIC        _VDMDTS_RESETCOUNTS
+  C:803CH         PUBLIC        _VDMDTS_RUNFORTEMP
+  C:8021H         PUBLIC        _VDMDTS_SETUP
+  C:8042H         PUBLIC        _VENC_SET4B5BLASTBIT
+  C:809CH         PUBLIC        _VFCAST_FINETUNE
+  C:80FCH         PUBLIC        _VFCAST_FSKADJ
+  C:80F6H         PUBLIC        _VFCAST_TUNE
+  C:80FFH         PUBLIC        _VFCAST_XOSETUP
+  C:804BH         PUBLIC        _VFC_SETUP
+  C:805DH         PUBLIC        _VHVRAM_WRITE
+  C:8063H         PUBLIC        _VMTP_INCCOUNT
+  C:8072H         PUBLIC        _VMTP_SETDECCOUNT
+  C:8075H         PUBLIC        _VNVM_SETADDR
+  C:8087H         PUBLIC        _VODS_ENABLE
+  C:8084H         PUBLIC        _VODS_SETUP
+  C:808AH         PUBLIC        _VODS_WRITEDATA
+BL51 BANKED LINKER/LOCATER V6.22            07/20/2017  16:05:41  PAGE 5
+
+
+  C:11E9H         PUBLIC        _VPA_SETUP
+  C:8090H         PUBLIC        _VPA_TUNE
+  C:80EDH         PUBLIC        _VSLEEPTIM_ADDTXTIMETOCOUNTER
+  C:80E7H         PUBLIC        _VSLEEPTIM_SETCOUNT
+  C:80E1H         PUBLIC        _VSTL_ENCODESETUP
+  C:80DBH         PUBLIC        _VSTL_SINGLETXLOOP
+  C:80C3H         PUBLIC        _VSYS_16BITDECLOOP
+  C:80C6H         PUBLIC        _VSYS_8BITDECLOOP
+  C:80A2H         PUBLIC        _VSYS_BANDGAPLDO
+  C:80B7H         PUBLIC        _VSYS_INCMASTERTIME
+  C:80BDH         PUBLIC        _VSYS_LEDINTENSITY
+  C:80AEH         PUBLIC        _VSYS_SETCLKSYS
+  C:80BAH         PUBLIC        _VSYS_SETMASTERTIME
+  C:80B1H         PUBLIC        _VSYS_SETUP
+  -------         ENDMOD        SI4010_ROM_KEIL
+
+  -------         MODULE        SI4010_DATA
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  X:4002H         PUBLIC        bLPOSC_TRIM
+  X:4040H         PUBLIC        abMTP_RDATA
+  X:4017H         PUBLIC        bPORT_TST
+  D:00A8H         PUBLIC        IE
+  X:11FFH         PUBLIC        bBoot_BootStat
+  X:4012H         PUBLIC        bPA_TRIM
+  X:11F3H         PUBLIC        wBoot_DpramTrimBeg
+  D:00B8H         PUBLIC        IP
+  X:4016H         PUBLIC        bXO_CTRL
+  X:11FDH         PUBLIC        wBoot_NvmCopyAddr
+  X:400CH         PUBLIC        wPA_CAP
+  X:11E0H         PUBLIC        abBoot_Reserve0
+  X:11F7H         PUBLIC        abBoot_Reserve1
+  X:11F5H         PUBLIC        wBoot_NvmUserBeg
+  D:00C8H         PUBLIC        TMR2CTRL
+  X:4008H         PUBLIC        lFC_COUNT
+  D:00D0H         PUBLIC        PSW
+  -------         ENDMOD        SI4010_DATA
+
+  -------         MODULE        ?C_STARTUP
+  C:018CH         SEGMENT       ?C_C51STARTUP
+  I:0090H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:4000H         SYMBOL        PDATASTART
+  N:0040H         SYMBOL        PPAGE
+  N:0001H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:018CH         SYMBOL        STARTUP1
+  C:0000H         LINE#         144
+  C:018CH         LINE#         151
+  C:018FH         LINE#         154
+  C:0192H         LINE#         155
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        KEYFOB_MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:009CH         PUBLIC        RTC_CTRL
+  D:0090H         PUBLIC        P1
+  C:0215H         PUBLIC        vPacketAssemble
+BL51 BANKED LINKER/LOCATER V6.22            07/20/2017  16:05:41  PAGE 6
+
+
+  B:00A8H.7       PUBLIC        EA
+  D:0040H         PUBLIC        iBatteryMv
+  D:00DAH         PUBLIC        PROT0_CTRL
+  D:00A8H         PUBLIC        IE
+  D:0042H         PUBLIC        bPreamble
+  X:0900H         PUBLIC        abFrameBuffer
+  X:0902H         PUBLIC        lLEDOnTime
+  X:0906H         PUBLIC        lPartID
+  D:00B8H         PUBLIC        IP
+  X:090AH         PUBLIC        fDesiredFreqFSK
+  X:090EH         PUBLIC        pbRData
+  B:00B8H.2       PUBLIC        PDMD
+  C:001EH         PUBLIC        main
+  X:0912H         PUBLIC        fDesiredFreqOOK
+  D:0043H         PUBLIC        lTimestamp
+  D:0020H         PUBLIC        bPrevBtn
+  X:0916H         PUBLIC        bFskDev
+  D:0047H         PUBLIC        bIsr_DebounceCount
+  X:0917H         PUBLIC        rOdsSetup
+  B:00A8H.3       PUBLIC        ERTC
+  X:0920H         PUBLIC        rBsrSetup
+  D:0048H         PUBLIC        pbFrameHead
+  X:0925H         PUBLIC        rPaSetup
+  C:02CBH         PUBLIC        _vConvertPacket
+  X:0931H         PUBLIC        fDesiredFreq
+  C:03B7H         PUBLIC        ab2to6bitTable
+  C:028DH         PUBLIC        vRepeatTxLoop
+  C:03A7H         PUBLIC        abConvTable
+  X:0935H         PUBLIC        rXoSetup
+  X:093AH         PUBLIC        bRepeatCount
+  C:0360H         PUBLIC        vButtonCheck
+  D:00C8H         PUBLIC        TMR2CTRL
+  D:00B5H         PUBLIC        PORT_CTRL
+  D:004AH         PUBLIC        wPacketCount
+  X:093BH         PUBLIC        lShiftedPartID
+  B:0080H.1       PUBLIC        GPIO1
+  B:0080H.5       PUBLIC        GPIO_LED
+  X:093FH         PUBLIC        bButtonState
+  D:004CH         PUBLIC        bStatus
+  X:0940H         PUBLIC        bFrameSize
+  X:0941H         PUBLIC        abBsrPtsPlaceHolder
+  C:0336H         PUBLIC        isr_rtc
+  D:00D0H         PUBLIC        PSW
+  X:0947H         PUBLIC        bValidBtn
+  -------         PROC          MAIN
+  C:001EH         LINE#         39
+  C:001EH         LINE#         40
+  C:001EH         LINE#         48
+  C:0020H         LINE#         50
+  C:0023H         LINE#         51
+  C:0026H         LINE#         52
+  C:0029H         LINE#         54
+  C:002BH         LINE#         55
+  C:0030H         LINE#         56
+  C:003BH         LINE#         58
+  C:0040H         LINE#         67
+  C:0043H         LINE#         69
+  C:0046H         LINE#         71
+  C:0048H         LINE#         72
+  C:004AH         LINE#         73
+  C:0050H         LINE#         77
+  C:005AH         LINE#         78
+  C:0064H         LINE#         79
+  C:006AH         LINE#         80
+  C:006EH         LINE#         82
+BL51 BANKED LINKER/LOCATER V6.22            07/20/2017  16:05:41  PAGE 7
+
+
+  C:0074H         LINE#         83
+  C:007EH         LINE#         84
+  C:0084H         LINE#         86
+  C:008EH         LINE#         87
+  C:0098H         LINE#         88
+  C:009FH         LINE#         92
+  C:00A2H         LINE#         97
+  C:00ABH         LINE#         100
+  C:00B0H         LINE#         102
+  C:00B6H         LINE#         103
+  C:00B6H         LINE#         105
+  C:00B6H         LINE#         113
+  C:00B6H         LINE#         114
+  C:00B6H         LINE#         116
+  C:00B9H         LINE#         117
+  C:00B9H         LINE#         119
+  C:00BCH         LINE#         120
+  C:00C7H         LINE#         121
+  C:00CAH         LINE#         123
+  C:00D9H         LINE#         124
+  C:00D9H         LINE#         126
+  C:00DCH         LINE#         128
+  C:00EBH         LINE#         129
+  C:00EBH         LINE#         131
+  C:00EEH         LINE#         133
+  C:00FEH         LINE#         134
+  C:00FEH         LINE#         136
+  C:0101H         LINE#         138
+  C:010AH         LINE#         139
+  C:010AH         LINE#         143
+  C:0115H         LINE#         144
+  C:0117H         LINE#         145
+  C:011AH         LINE#         146
+  C:011AH         LINE#         149
+  C:012DH         LINE#         150
+  C:012FH         LINE#         154
+  C:013AH         LINE#         155
+  C:014AH         LINE#         156
+  C:014AH         LINE#         157
+  C:0150H         LINE#         158
+  C:0150H         LINE#         159
+  C:0160H         LINE#         160
+  C:0160H         LINE#         162
+  C:0166H         LINE#         163
+  C:0166H         LINE#         164
+  C:016FH         LINE#         165
+  C:016FH         LINE#         166
+  C:0172H         LINE#         167
+  C:0174H         LINE#         168
+  C:0177H         LINE#         170
+  C:0177H         LINE#         172
+  C:018AH         LINE#         173
+  -------         ENDPROC       MAIN
+  -------         PROC          VREPEATTXLOOP
+  C:028DH         LINE#         180
+  C:028DH         LINE#         181
+  C:028DH         LINE#         184
+  C:029EH         LINE#         187
+  C:02A4H         LINE#         188
+  C:02A4H         LINE#         190
+  C:02A4H         LINE#         192
+  C:02AAH         LINE#         194
+  C:02B1H         LINE#         195
+  C:02B1H         LINE#         196
+  C:02B9H         LINE#         197
+BL51 BANKED LINKER/LOCATER V6.22            07/20/2017  16:05:41  PAGE 8
+
+
+  C:02B9H         LINE#         199
+  C:02BCH         LINE#         201
+  C:02C8H         LINE#         203
+  -------         ENDPROC       VREPEATTXLOOP
+  -------         PROC          ISR_RTC
+  C:0336H         LINE#         210
+  C:0343H         LINE#         216
+  C:0346H         LINE#         217
+  C:034BH         LINE#         218
+  C:034DH         LINE#         219
+  C:0352H         LINE#         220
+  C:0352H         LINE#         221
+  C:0355H         LINE#         222
+  C:0355H         LINE#         224
+  -------         ENDPROC       ISR_RTC
+  -------         PROC          VBUTTONCHECK
+  C:0360H         LINE#         240
+  C:0360H         LINE#         241
+  C:0360H         LINE#         243
+  C:0362H         LINE#         244
+  C:0367H         LINE#         245
+  C:036DH         LINE#         247
+  C:036DH         LINE#         249
+  C:0375H         LINE#         250
+  C:0379H         LINE#         251
+  C:0379H         LINE#         252
+  C:037CH         LINE#         253
+  C:037EH         LINE#         254
+  C:0380H         LINE#         256
+  C:0380H         LINE#         257
+  C:0386H         LINE#         258
+  C:0386H         LINE#         259
+  C:0386H         LINE#         261
+  C:0388H         LINE#         263
+  -------         ENDPROC       VBUTTONCHECK
+  -------         PROC          VPACKETASSEMBLE
+  C:0215H         LINE#         268
+  C:0215H         LINE#         269
+  C:0215H         LINE#         274
+  C:021CH         LINE#         276
+  C:0222H         LINE#         277
+  C:0227H         LINE#         279
+  C:023BH         LINE#         281
+  C:0241H         LINE#         283
+  C:0247H         LINE#         284
+  C:024BH         LINE#         285
+  C:024EH         LINE#         286
+  C:0250H         LINE#         287
+  C:0254H         LINE#         288
+  C:0256H         LINE#         289
+  C:0259H         LINE#         290
+  C:025BH         LINE#         291
+  C:025FH         LINE#         292
+  C:0263H         LINE#         304
+  C:026CH         LINE#         305
+  C:0272H         LINE#         306
+  C:0275H         LINE#         307
+  C:0279H         LINE#         308
+  C:027EH         LINE#         309
+  C:0282H         LINE#         310
+  C:0285H         LINE#         311
+  C:028CH         LINE#         315
+  -------         ENDPROC       VPACKETASSEMBLE
+  -------         PROC          _VCONVERTPACKET
+  D:0007H         SYMBOL        bModType
+BL51 BANKED LINKER/LOCATER V6.22            07/20/2017  16:05:41  PAGE 9
+
+
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0004H         SYMBOL        low
+  D:0005H         SYMBOL        high
+  -------         ENDDO         
+  C:02CBH         LINE#         320
+  C:02CBH         LINE#         321
+  C:02CBH         LINE#         324
+  C:02CEH         LINE#         325
+  C:02CEH         LINE#         326
+  C:02D0H         LINE#         327
+  C:02D0H         LINE#         328
+  C:02D2H         LINE#         329
+  C:02D2H         LINE#         330
+  C:02EAH         LINE#         331
+  C:02F1H         LINE#         332
+  C:0300H         LINE#         333
+  C:0304H         LINE#         335
+  -------         ENDPROC       _VCONVERTPACKET
+  -------         ENDMOD        KEYFOB_MAIN
+
+  -------         MODULE        ?C?LSTKXDATA
+  C:0305H         PUBLIC        ?C?LSTKXDATA
+  -------         ENDMOD        ?C?LSTKXDATA
+
+
+
+INTER-MODULE CROSS-REFERENCE LISTING
+------------------------------------
+
+
+NAME . . . . . . . . . . . . . USAGE    MODULE NAMES
+----------------------------------------------------
+
+?C?CASTF . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?FCASTC. . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?FCASTI. . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?FCASTL. . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?FPADD . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?FPCMP . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?FPCMP3. . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?FPDIV . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?FPGETOPN2 . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?FPMUL . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?FPNANRESULT . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?FPOVERFLOW. . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?FPRESULT. . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?FPRESULT2 . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?FPSUB . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?FPUNDERFLOW . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?ICALL . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?ICALL2. . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?IILDX . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?IMUL. . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?LADD. . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?LLDIDATA. . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?LLDIDATA0 . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?LLDXDATA. . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?LLDXDATA0 . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?LMUL. . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?LNEG. . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?LOR . . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?LSHL. . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?LSTIDATA. . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?LSTKXDATA . . . . . . . . . CODE;    ?C?LSTKXDATA  KEYFOB_MAIN  
+BL51 BANKED LINKER/LOCATER V6.22            07/20/2017  16:05:41  PAGE 10
+
+
+?C?LSTXDATA. . . . . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+?C?LSUB. . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?LXOR. . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?OFFXADD . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?SIDIV . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?SLDIV . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?UIDIV . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?ULCMP . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+?C?ULDIV . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C?ULSHR . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+?C_INITSEGSTART. . . . . . . . CODE;    ** L51 GENERATED **  
+?C_START . . . . . . . . . . . CODE;    ?C_INIT  ?C_STARTUP  
+?C_STARTUP . . . . . . . . . . CODE;    ?C_STARTUP  KEYFOB_MAIN  
+AB2TO6BITTABLE . . . . . . . . CODE;    KEYFOB_MAIN  
+ABBOOT_RESERVE0. . . . . . . . XDATA;   SI4010_DATA  
+ABBOOT_RESERVE1. . . . . . . . XDATA;   SI4010_DATA  
+ABBSRPTSPLACEHOLDER. . . . . . XDATA;   KEYFOB_MAIN  
+ABCONVTABLE. . . . . . . . . . CODE;    KEYFOB_MAIN  
+ABFRAMEBUFFER. . . . . . . . . XDATA;   KEYFOB_MAIN  
+ABMTP_RDATA. . . . . . . . . . XDATA;   SI4010_DATA  
+ABSI4010_DATAAPIRESERVE. . . . DATA;    SI4010_LINK  
+ABSI4010_IDATAAPIRESERVE . . . IDATA;   SI4010_LINK  
+ABSI4010_XDATAAPIRESERVE . . . XDATA;   SI4010_LINK  
+BBOOT_BOOTSTAT . . . . . . . . XDATA;   SI4010_DATA  
+BBSR_GETPTSITEMCNT . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+BBSR_GETTIMESTAMP. . . . . . . CODE;    SI4010_ROM_KEIL  
+BBUTTONSTATE . . . . . . . . . XDATA;   KEYFOB_MAIN  
+BDMDTS_GETSAMPLESTAKEN . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+BFRAMESIZE . . . . . . . . . . XDATA;   KEYFOB_MAIN  
+BFSKDEV. . . . . . . . . . . . XDATA;   KEYFOB_MAIN  
+BISR_DEBOUNCECOUNT . . . . . . DATA;    KEYFOB_MAIN  
+BLPOSC_TRIM. . . . . . . . . . XDATA;   SI4010_DATA  
+BNVM_COPYBLOCK . . . . . . . . CODE;    SI4010_ROM_KEIL  
+BPA_TRIM . . . . . . . . . . . XDATA;   SI4010_DATA  
+BPORT_TST. . . . . . . . . . . XDATA;   SI4010_DATA  
+BPREAMBLE. . . . . . . . . . . DATA;    KEYFOB_MAIN  
+BPREVBTN . . . . . . . . . . . DATA;    KEYFOB_MAIN  
+BREPEATCOUNT . . . . . . . . . XDATA;   KEYFOB_MAIN  
+BSLEEPTIM_CHECKDUTYCYCLE . . . CODE;    SI4010_ROM_KEIL  
+BSTATUS. . . . . . . . . . . . DATA;    KEYFOB_MAIN  
+BSYS_GETBOOTSTATUS . . . . . . CODE;    SI4010_ROM_KEIL  
+BSYS_GETREVID. . . . . . . . . CODE;    SI4010_ROM_KEIL  
+BVALIDBTN. . . . . . . . . . . XDATA;   KEYFOB_MAIN  
+BXO_CTRL . . . . . . . . . . . XDATA;   SI4010_DATA  
+FDESIREDFREQ . . . . . . . . . XDATA;   KEYFOB_MAIN  
+FDESIREDFREQFSK. . . . . . . . XDATA;   KEYFOB_MAIN  
+FDESIREDFREQOOK. . . . . . . . XDATA;   KEYFOB_MAIN  
+IBATTERYMV . . . . . . . . . . DATA;    KEYFOB_MAIN  
+IDMDTS_GETDATA . . . . . . . . CODE;    SI4010_ROM_KEIL  
+IDMDTS_GETLATESTDMDSAMPLE. . . CODE;    SI4010_ROM_KEIL  
+IDMDTS_GETLATESTTEMP . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+ISR_RTC. . . . . . . . . . . . CODE;    KEYFOB_MAIN  
+LFC_COUNT. . . . . . . . . . . XDATA;   SI4010_DATA  
+LFC_GETCOUNT . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+LFC_STARTPOLLGETCOUNT. . . . . CODE;    SI4010_ROM_KEIL  
+LLEDONTIME . . . . . . . . . . XDATA;   KEYFOB_MAIN  
+LPARTID. . . . . . . . . . . . XDATA;   KEYFOB_MAIN  
+LSHIFTEDPARTID . . . . . . . . XDATA;   KEYFOB_MAIN  
+LSLEEPTIM_GETCOUNT . . . . . . CODE;    SI4010_ROM_KEIL  
+LSLEEPTIM_GETONEHOURVALUE. . . CODE;    SI4010_ROM_KEIL  
+LSYS_GETMASTERTIME . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+LSYS_GETPRODID . . . . . . . . CODE;    SI4010_ROM_KEIL  
+LTIMESTAMP . . . . . . . . . . DATA;    KEYFOB_MAIN  
+MAIN . . . . . . . . . . . . . CODE;    KEYFOB_MAIN  ?C_INIT  
+PBFRAMEHEAD. . . . . . . . . . DATA;    KEYFOB_MAIN  
+BL51 BANKED LINKER/LOCATER V6.22            07/20/2017  16:05:41  PAGE 11
+
+
+PBMTP_READ . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+PBRDATA. . . . . . . . . . . . XDATA;   KEYFOB_MAIN  
+RBSRSETUP. . . . . . . . . . . XDATA;   KEYFOB_MAIN  
+RODSSETUP. . . . . . . . . . . XDATA;   KEYFOB_MAIN  
+RPASETUP . . . . . . . . . . . XDATA;   KEYFOB_MAIN  
+RXOSETUP . . . . . . . . . . . XDATA;   KEYFOB_MAIN  
+VBSR_SERVICE . . . . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+VBUTTONCHECK . . . . . . . . . CODE;    KEYFOB_MAIN  
+VDMDTS_CLEARDMD. . . . . . . . CODE;    SI4010_ROM_KEIL  
+VDMDTS_CLEARDMDINTFLAG . . . . CODE;    SI4010_ROM_KEIL  ISR_DMD  
+VDMDTS_ISRCALL . . . . . . . . CODE;    SI4010_ROM_KEIL  ISR_DMD  
+VFCAST_SETUP . . . . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+VFC_POLLDONE . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+VFC_STARTCOUNT . . . . . . . . CODE;    SI4010_ROM_KEIL  
+VISR_DMD . . . . . . . . . . . CODE;    ISR_DMD  
+VMTP_STROBE. . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+VNVM_MCDISABLEREAD . . . . . . CODE;    SI4010_ROM_KEIL  
+VNVM_MCENABLEREAD. . . . . . . CODE;    SI4010_ROM_KEIL  
+VPACKETASSEMBLE. . . . . . . . CODE;    KEYFOB_MAIN  
+VREPEATTXLOOP. . . . . . . . . CODE;    KEYFOB_MAIN  
+VSTL_POSTLOOP. . . . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+VSTL_PRELOOP . . . . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+VSYS_FIRSTPOWERUP. . . . . . . CODE;    SI4010_ROM_KEIL  
+VSYS_FORCELC . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+VSYS_LPOSCADJ. . . . . . . . . CODE;    SI4010_ROM_KEIL  
+VSYS_SHUTDOWN. . . . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+WBOOT_DPRAMTRIMBEG . . . . . . XDATA;   SI4010_DATA  
+WBOOT_NVMCOPYADDR. . . . . . . XDATA;   SI4010_DATA  
+WBOOT_NVMUSERBEG . . . . . . . XDATA;   SI4010_DATA  
+WBSR_GETCURRENTBUTTON. . . . . CODE;    SI4010_ROM_KEIL  
+WBSR_POP . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+WNVM_GETADDR . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+WPACKETCOUNT . . . . . . . . . DATA;    KEYFOB_MAIN  
+WPA_CAP. . . . . . . . . . . . XDATA;   SI4010_DATA  
+WSYS_GETCHIPID . . . . . . . . CODE;    SI4010_ROM_KEIL  
+WSYS_GETKEILVER. . . . . . . . CODE;    SI4010_ROM_KEIL  
+WSYS_GETROMID. . . . . . . . . CODE;    SI4010_ROM_KEIL  
+_ABS . . . . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+_BENC_4B5BENCODE . . . . . . . CODE;    SI4010_ROM_KEIL  
+_BENC_MANCHESTERENCODE . . . . CODE;    SI4010_ROM_KEIL  
+_BHVRAM_READ . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+_BMTP_WRITE. . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+_BSTL_ENCODEBYTE . . . . . . . CODE;    SI4010_ROM_KEIL  
+_IMVDD_MEASURE . . . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+_LMTP_GETDECCOUNT. . . . . . . CODE;    SI4010_ROM_KEIL  
+_VAES_CIPHER . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+_VAES_INVCIPHER. . . . . . . . CODE;    SI4010_ROM_KEIL  
+_VAES_INVGENKEY. . . . . . . . CODE;    SI4010_ROM_KEIL  
+_VBSR_INITPTS. . . . . . . . . CODE;    SI4010_ROM_KEIL  
+_VBSR_SETUP. . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+_VCONVERTPACKET. . . . . . . . CODE;    KEYFOB_MAIN  
+_VDMDTS_ENABLE . . . . . . . . CODE;    SI4010_ROM_KEIL  
+_VDMDTS_RESETCOUNTS. . . . . . CODE;    SI4010_ROM_KEIL  
+_VDMDTS_RUNFORTEMP . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+_VDMDTS_SETUP. . . . . . . . . CODE;    SI4010_ROM_KEIL  
+_VENC_SET4B5BLASTBIT . . . . . CODE;    SI4010_ROM_KEIL  
+_VFCAST_FINETUNE . . . . . . . CODE;    SI4010_ROM_KEIL  
+_VFCAST_FSKADJ . . . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+_VFCAST_TUNE . . . . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+_VFCAST_XOSETUP. . . . . . . . CODE;    SI4010_ROM_KEIL  
+_VFC_SETUP . . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+_VHVRAM_WRITE. . . . . . . . . CODE;    SI4010_ROM_KEIL  
+_VMTP_INCCOUNT . . . . . . . . CODE;    SI4010_ROM_KEIL  
+_VMTP_SETDECCOUNT. . . . . . . CODE;    SI4010_ROM_KEIL  
+_VNVM_SETADDR. . . . . . . . . CODE;    SI4010_ROM_KEIL  
+BL51 BANKED LINKER/LOCATER V6.22            07/20/2017  16:05:41  PAGE 12
+
+
+_VODS_ENABLE . . . . . . . . . CODE;    SI4010_ROM_KEIL  
+_VODS_SETUP. . . . . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+_VODS_WRITEDATA. . . . . . . . CODE;    SI4010_ROM_KEIL  
+_VPA_SETUP . . . . . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+_VPA_TUNE. . . . . . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+_VSLEEPTIM_ADDTXTIMETOCOUNTER. CODE;    SI4010_ROM_KEIL  
+_VSLEEPTIM_SETCOUNT. . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+_VSTL_ENCODESETUP. . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+_VSTL_SINGLETXLOOP . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+_VSYS_16BITDECLOOP . . . . . . CODE;    SI4010_ROM_KEIL  
+_VSYS_8BITDECLOOP. . . . . . . CODE;    SI4010_ROM_KEIL  
+_VSYS_BANDGAPLDO . . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+_VSYS_INCMASTERTIME. . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+_VSYS_LEDINTENSITY . . . . . . CODE;    SI4010_ROM_KEIL  
+_VSYS_SETCLKSYS. . . . . . . . CODE;    SI4010_ROM_KEIL  
+_VSYS_SETMASTERTIME. . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+_VSYS_SETUP. . . . . . . . . . CODE;    SI4010_ROM_KEIL  KEYFOB_MAIN  
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?VBUTTONCHECK?KEYFOB_MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_VCONVERTPACKET?KEYFOB_MAIN
+
+Program Size: data=158.0 xdata=479 code=947
+LINK/LOCATE RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)

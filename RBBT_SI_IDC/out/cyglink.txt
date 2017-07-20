@@ -1,0 +1,6 @@
+"C:\Si4010_example_programs\RBBT_SI_IDC\src\isr_dmd.obj",
+"C:\Si4010_example_programs\common\src\si4010_link.obj",
+"C:\Si4010_example_programs\common\src\si4010_rom_keil.obj",
+"C:\Si4010_example_programs\common\src\si4010_data.obj",
+"C:\Si4010_example_programs\RBBT_SI_IDC\src\keyfob_startup.obj",
+"C:\Si4010_example_programs\RBBT_SI_IDC\src\keyfob_main.obj"  TO "C:\Si4010_example_programs\RBBT_SI_IDC\out\4010-kfob-dir.omf" PL(68) PW(78) IXREF RS (256) CODE (0x0-0X08FF) XDATA (0X0900-0X107F) DATA (0X40) IDATA (0X70) STACK (?STACK (0x90)) 
