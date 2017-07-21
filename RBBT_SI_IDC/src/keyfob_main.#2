@@ -262,7 +262,7 @@ void vButtonCheck (void) // IS THIS NECESSARY?
   return;
 }
 
-/*
+/*  POSSIBLE BUILD: allow multiple Packet assemblies OR somehow broadcast part of packet at much higher frequency (for hidden barcode)
  *------------------------------------------------------------------------------ 
  */
 void vPacketAssemble (void)

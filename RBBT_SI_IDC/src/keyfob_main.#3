@@ -75,8 +75,8 @@ void  main (void)
 // Setup RF parameters.
 
 		fDesiredFreqOOK 	 = 166378000.0; // Tweak frequency so that the transduced signal falls at the top of the 3-8kHz detection range of SensorGnome
-        fDesiredFreqFSK 	 = 166400000.0;
-        bFskDev 		     = 35.0; // Freq mod of 3.5kHz
+        fDesiredFreqFSK 	 = 166378000.0;
+        bFskDev 		     = 3.5; // Freq mod of 3.5kHz
 		rOdsSetup.bModulationType = 1; // OOK = 0; FSK = 1
         // Setup the PA.
         rPaSetup.bLevel      = 77;
@@ -262,7 +262,7 @@ void vButtonCheck (void) // IS THIS NECESSARY?
   return;
 }
 
-/*
+/*  POSSIBLE BUILD: allow multiple Packet assemblies OR somehow broadcast part of packet at much higher frequency (for hidden barcode)
  *------------------------------------------------------------------------------ 
  */
 void vPacketAssemble (void)

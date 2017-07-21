@@ -75,7 +75,7 @@ void  main (void)
 // Setup RF parameters.
 
 		fDesiredFreqOOK 	 = 166378000.0; // Tweak frequency so that the transduced signal falls at the top of the 3-8kHz detection range of SensorGnome
-        fDesiredFreqFSK 	 = 166378000.0;
+        fDesiredFreqFSK 	 = 166378500.0;
         bFskDev 		     = 3.5; // Freq mod of 3.5kHz
 		rOdsSetup.bModulationType = 1; // OOK = 0; FSK = 1
         // Setup the PA.
