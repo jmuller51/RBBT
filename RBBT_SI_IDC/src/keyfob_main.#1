@@ -63,12 +63,12 @@ void  main (void)
         // Setup the BSR 
         vBsr_Setup( &rBsrSetup );
 */
-        // Setup the RTC to tick every 5ms and clear it. Keep it disabled. 
+        // Setup the RTC to tick every 5ms and clear it. Keep it disabled. RTC = Real time clock?
         RTC_CTRL = (0x07 << B_RTC_DIV) | M_RTC_CLR;
         // Enable the RTC 
         RTC_CTRL |= M_RTC_ENA;
         // Enable the RTC interrupt and global interrupt enable 
-        ERTC = 1;
+        ERTC = 1; //Variable names?
         EA = 1;
         pbFrameHead = abFrameBuffer;
 //------------------------------------------------------------
@@ -76,7 +76,7 @@ void  main (void)
 
 		fDesiredFreqOOK 	 = 166378000.0; // Tweak frequency so that the transduced signal falls at the top of the 3-8kHz detection range of SensorGnome
         fDesiredFreqFSK 	 = 166379000.0;
-        bFskDev 		     = 3.5; // Freq mod of 3.5kHz
+        bFskDev 		     = 3.5; // Freq mod of 3.5kHz //frequency change of cycle
 		rOdsSetup.bModulationType = 1; // OOK = 0; FSK = 1
         // Setup the PA.
         rPaSetup.bLevel      = 77;
@@ -98,7 +98,7 @@ iBatteryMv = iMVdd_Measure( bBatteryWait_c );
   
 // Setup the DMD temperature sensor for temperature mode 
 vDmdTs_RunForTemp( 3 ); // Skip first 3 samples 
-// Wait until there is a valid DMD temp sensor sample 
+// Wait until there is a valid DMD temp sensor sample. Temp sensor? Is this code for future use?
 while ( 0 == bDmdTs_GetSamplesTaken() )
 {
         //wait
@@ -113,7 +113,7 @@ while ( 0 == bDmdTs_GetSamplesTaken() )
 while(1)
 {
 
-	if (GPIO1 == 1)
+	if (GPIO1 == 1) //What is the GPIO connected to, and what is 1?
 	{
 
 		vPacketAssemble();
@@ -293,7 +293,7 @@ void vPacketAssemble (void)
 /*						abFrameBuffer[10] = 0xf0;
 						abFrameBuffer[11] = 0xf0;
 */  // Comment out the rows not needed for desired frame size
-
+//And each abFrameBuffer is read backwards
 
 // NOTE: check whether low or high state priority is set. This can cause reversal of anticipated pattern.
 
@@ -327,7 +327,7 @@ void vConvertPacket (BYTE bModType)
   }
   for (i=0;i<(sizeof abFrameBuffer);i++)
   {
-	low = abConvTable[(abFrameBuffer[i] & 0xf0) >> 4] & 0x0f;
+	low = abConvTable[(abFrameBuffer[i] & 0xf0) >> 4] & 0x0f; //Is this coding for the frequency modulation?
 	high = abConvTable[abFrameBuffer[i] & 0x0f] & 0xf0;
 	abFrameBuffer[i] = (high | low) ^ bModType;
   }
